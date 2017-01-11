@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="NeXt/css/next.css"></link>
+	<script src="NeXt/js/next.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		/*
+		*定义一个名为MyClass的类
+		*/
+		nx.define("MyClass", {
+		    //定义属性
+		    properties: {
+		        title: '',
+		        msg: {
+		            value: 'Hello World!'
+		        }
+		    },
+		    //定义方法
+		    methods: {
+		        hello: function () {
+		            console.log(this.msg())
+		        }
+		    }
+		});
+
+		//实例化MyClass类,得到对象foo
+		var foo = new MyClass();
+		foo.hello();//调用对象方法hello,控制台输出Hello World
+
+		//给msg属性赋值
+		foo.msg("Hello!");
+		foo.hello();//调用对象方法hello,控制台输出Hello
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inherit</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="NeXt/css/next.css"></link>
+	<script src="NeXt/js/next.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	nx.define("Parent",{
+	    properties:{
+	        animal:'cat'
+	    },
+	    methods:{
+	        init:function(){
+	            console.log("I am parent");
+	        },
+	        getType:function(){
+	            return this.animal();
+	        }
+	    }
+	});
+
+	nx.define("Children", Parent, {
+	    properties:{
+	        name: 'Hony'
+	    },
+	    methods:{
+	        //重写构造器
+	        init:function(){
+	            console.log("I am child");
+	        },
+	        getName:function(){
+	            return this.name();
+	        }
+	    }
+	});
+
+	var  children = new Children();
+	var type = children.getType();
+	var name = children.getName();
+	console.log(type + ':' + name);
+	</script>
+</body>
+</html>
