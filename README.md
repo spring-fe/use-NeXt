@@ -16,7 +16,7 @@ NeXt是一个基于HTML5/Javascript框架，提供了一个具有高性能和丰
 - 友好的用户交互
 
 ## 文件结构
-
+![文件结构](images/file-structure.png)
 
 ## 快速开始
 
