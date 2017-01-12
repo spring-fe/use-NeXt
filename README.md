@@ -47,9 +47,11 @@ MVVM设计模式采用双向数据绑定。View层变动，自动反映在ViewMo
 #### 界面与交互
 
 1.在初始化时，Model层的名字数据列表和ViewModel层数据关联，ViewModel层名字列表与View绑定，UI显示所绑定的列表。
+
 ![mvvm1](images/mvvm1.png)
 
 2.搜索框输入内容时，搜索框输入的w自动同步到ViewModel层，在ViewModel层根据key更新ViewModel层的名字列表，然后自动刷新UI。
+
 ![mvvm2](images/mvvm2.png)
 
 #### 代码实现
