@@ -40,6 +40,7 @@ NeXt使用面向对象的编程思想，使用Class类封装、Class类之间可
 ## MVVM设计模式
 
 MVVM设计模式采用双向数据绑定。View层变动，自动反映在ViewModel层上，ViewModel层将数据保存在Model上。Model层数据改变，通过ViewMode层自动刷新View。
+
 ![mvvm](images/mvvm.png)
 
 ### NeXt实例
